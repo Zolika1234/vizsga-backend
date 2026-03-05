@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "@prisma/client": "^6.19.2",
+    "express": "^5.2.1",
+    "mysql2": "^3.18.2",
+    "prisma": "^6.19.2"
+  },
+  "scripts": {
+    "dev": "nodemon index.js"
+  }
+}
