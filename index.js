@@ -59,7 +59,19 @@ app.get("/posts/months/:month", async (req, res) => {
     res.json(posts);
 });
 
-   
+app.post("/posts", async (req, res) => {
+    const { title, body, date, active, userId } = req.body;
+    const post = await prisma.post.create({
+        data: {
+            title,
+            body,
+            date: new Date(date),
+            active,
+            userId
+        }
+    });
+    res.json(post);
+});
 
 app.listen(3000, () => {    console.log("Fut a szerver");
 }); 
